@@ -6,6 +6,15 @@
 			<input type='password' placeholder='Password2' name='password2' />
 			<input type='submit' value='Reset Password' name='resetPassword' />
 		</form>
-		<script src="ticket.php">
+<?php
+	function generateRandom() {
+		$characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+		$randomString = '';
+		for ($i = 0; $i < 20; $i++) {
+    		$randomString .= $characters[rand(0, strlen($characters) - 1)];
+		}
+		return $randomString;
+	}
+?>
 	</body>
 </html>
